@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Login</h1>
+
+<div class="login_base">
+    <!-- <h1>Login</h1> -->
 
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">
@@ -47,4 +49,5 @@
             </div>
         </form>
     </div>
+</div>
 @endsection

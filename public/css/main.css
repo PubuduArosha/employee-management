@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300;400;500;600&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navigation_base {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background: #f5f6fa;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user_base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.logout_btn {
+    width: 4rem;
+    height: 2.5rem;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    background: #2e86de;
+    color: #fff;
+}
+
+.nav_dashboard {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+.username {
+    padding: 0.5rem 2rem;
+    background: rgba(46, 134, 222, 0.1);
+    border-radius: 40px 0px 0px 40px;
+    height: 2.5rem;
+    box-sizing: border-box;
+}
+
+
+
+/* login page */
+
+.login_base{
+    width:100%;
+    background: red;
+    height:calc(100vh - 60px);
+}
