@@ -85,36 +85,12 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="">Phone Number - 1</label>
-                        <input type="number" name="phone_number_1" class="form-control" placeholder="Phone Number - 1">
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="">Phone Number - 2</label>
-                        <input type="number" name="phone_number_2" class="form-control" placeholder="Phone Number - 2">
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="">Phone Number - 3</label>
-                        <input type="number" name="phone_number_3" class="form-control" placeholder="Phone Number - 3">
-                    </div>
-                </div>
-
-                <div class="col-md-6">
+                <div class="col-md-6 mt-3">
                     <div class="form-group">
                         <button class="btn btn-success btn-sm" type="submit">Update</button>
                         <a href="{{ route('employee.list') }}" class="btn btn-warning btn-sm">Cancel</a>
                     </div>
                 </div>
-
-
-
 
             </div>
         </form>
