@@ -6,7 +6,9 @@ use App\Models\Department;
 use App\Models\Employee;
 use App\Models\EmployeeAddress;
 use App\Models\EmployeeContact;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class EmployeeController extends Controller
 {
@@ -50,17 +52,24 @@ class EmployeeController extends Controller
         $employee->designation = $request->designation;
 
         if($employee->save()) {
-            foreach ($request->phones as $key => $phone) {
-                $employee_contact_number = new EmployeeContact();
-                $employee_contact_number->contact_number = $request->phone_number_. $key;
-                $employee_contact_number->save();
+            if(!empty($request->employee_contacts)) {
+                foreach ($request->employee_contacts as $employee_contact) {
+                    EmployeeContact::create([
+                        'employee_id' => $employee->id,
+                        'contact_number' => $employee_contact['phone']
+                    ]);
+                }
             }
 
-            foreach ($request->addresses as $key => $address) {
-                $employee_address = new EmployeeAddress();
-                $employee_address->address = $request->address_.$key;
-                $employee_address->save();
+            if(!empty($request->employee_addresses)) {
+                foreach ($request->employee_addresses as $employee_address) {
+                    EmployeeAddress::create([
+                        'employee_id' => $employee->id,
+                        'address' => $employee_address['address']
+                    ]);
+                }
             }
+            
         }
         return redirect(route('employee.list'))->with('success', 'Employee successfully created');
     }

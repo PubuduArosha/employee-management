@@ -9,6 +9,11 @@ class Employee extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'employee_id',
+        'address'
+    ];
+
     public function department()
     {
         return $this->belongsTo('App\Models\Department');

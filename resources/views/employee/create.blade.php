@@ -85,21 +85,23 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 mt-3">
-                    <div class="form-group">
-                        <button type="button" class="btn btn-primary btn-sm" id="add_phone">Add phone</button>
-                    </div>
-                </div>
+              <!-------->
+                <table class="table" id="multiForm">
+                    <tr>
+                        <td><input type="text" name="employee_contacts[0][phone]" class="form-control" placeholder="Phone Number"/></td>
+                        <td><input type="button" name="add" value="Add" id="addRemoveIp" class="btn btn-outline-dark btn-sm"></td>
+                    </tr>
+                </table>
+            <!-------->
 
-
-                <div class="phone_list" id="phone_list"></div>
-
-                <div class="col-md-6" id="emp_phone">
-                    <div class="form-group">
-                        <label for="">Phone Number - 1</label>
-                        <input type="number" name="phone_number_1" class="form-control" placeholder="Phone Number - 1">
-                    </div>
-                </div>
+                <!--------------->
+                <table class="table" id="multiAddress">
+                    <tr>
+                        <td><textarea name="employee_addresses[0][address]" class="form-control" placeholder="Address"></textarea></td>
+                        <td><input type="button" name="add" value="Add" id="addRemoveAddress" class="btn btn-outline-dark btn-sm"></td>
+                    </tr>
+                </table>
+                <!--------------->
 
                 <div class="col-md-6">
                     <div class="form-group">
@@ -115,10 +117,26 @@
 
 @section('scripts')
     <script>
-        $('#add_phone').on('click', function () {
-            console.log('click');
-            $("#emp_phone").clone().insertAfter("div.phone_list:last");
-
+        var i = 0;
+        $("#addRemoveIp").click(function () {
+            ++i;
+            $("#multiForm").append('<tr><td><input type="text" name="employee_contacts['+i+'][phone]" class="form-control" placeholder="Phone Number '+i+'"/></td><td><button type="button" class="remove-item btn btn-danger btn-sm">Delete</button></td></tr>');
         });
+        $(document).on('click', '.remove-item', function () {
+            $(this).parents('tr').remove();
+        });
+    </script>
+
+    <script>
+        var j = 0;
+        $('#addRemoveAddress').click(function () {
+           ++j;
+           $('#multiAddress').append('<tr><td><textarea class="form-control" name="employee_addresses['+j+'][address]" placeholder="Address '+j+'"></textarea></td><td><button type="button" class="remove-item btn btn-danger btn-sm">Delete</button></td></tr>');
+        });
+
+        $(document).on('click', '.remove-address', function () {
+           $(this).parent('tr').remove();
+        });
+
     </script>
 @endsection
