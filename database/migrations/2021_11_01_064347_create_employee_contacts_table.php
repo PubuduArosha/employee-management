@@ -17,7 +17,7 @@ class CreateEmployeeContactsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('employee_id');
             $table->string('contact_number');
-            $table->foreign('employee_id')->references('id')->on('employees');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
             $table->timestamps();
         });
     }

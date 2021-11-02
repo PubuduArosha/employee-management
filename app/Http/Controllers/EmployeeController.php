@@ -125,8 +125,6 @@ class EmployeeController extends Controller
 
         if($employee) {
 
-            $employee->employee_contacts()->delete();
-            $employee->employee_addresses()->delete();
             $employee->delete();
 
             return redirect(route('employee.list'))->with('success', 'Employee successfully deleted');
