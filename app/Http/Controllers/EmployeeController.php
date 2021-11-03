@@ -57,21 +57,21 @@ class EmployeeController extends Controller
 
         if($employee->save()) { // save employee as new employee
             
-            if(!empty($request->employee_contacts)) {
-                foreach ($request->employee_contacts as $employee_contact) {
+            if(!empty($request->employee_contacts)) { // check if employee contact list
+                foreach ($request->employee_contacts as $employee_contact) { // loop the employee contact list
                     EmployeeContact::create([
                         'employee_id' => $employee->id,
                         'contact_number' => $employee_contact['phone']
-                    ]);
+                    ]);  // create employee contact related to the employee
                 }
             }
 
-            if(!empty($request->employee_addresses)) {
-                foreach ($request->employee_addresses as $employee_address) {
+            if(!empty($request->employee_addresses)) { // check if employee address list
+                foreach ($request->employee_addresses as $employee_address) { // loop the employee address list
                     EmployeeAddress::create([
                         'employee_id' => $employee->id,
                         'address' => $employee_address['address']
-                    ]);
+                    ]);  // create employee address related to the employee
                 }
             }
             
