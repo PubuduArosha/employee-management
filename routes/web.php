@@ -16,13 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ✳ Guest routes
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/auth/login', [AuthController::class, 'auth_login'])->name('auth_login');
 
+// ✳ Auth protected routes
 Route::group(['middleware' => ['prevent-back-history', 'auth', 'web']], function () {
     Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth_logout');
     Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+    // ✳ Employee section routes
     Route::group(['prefix' => 'employee'], function () {
         Route::get('/all', [EmployeeController::class, 'index'])->name('employee.list');
         Route::get('/create', [EmployeeController::class, 'create'])->name('employee.create');
@@ -32,6 +35,7 @@ Route::group(['middleware' => ['prevent-back-history', 'auth', 'web']], function
         Route::delete('/delete/{id}', [EmployeeController::class, 'delete'])->name('employee.delete');
     });
 
+    // ✳ Department section routes
     Route::group(['prefix' => 'department'], function () {
         Route::get('/all', [DepartmentController::class, 'index'])->name('department.list');
         Route::get('/create', [DepartmentController::class, 'create'])->name('department.create');

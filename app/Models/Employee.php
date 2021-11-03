@@ -14,16 +14,19 @@ class Employee extends Model
         'address'
     ];
 
+    // ✳ One employee has One department
     public function department()
     {
         return $this->belongsTo('App\Models\Department');
     }
 
+    // ✳ One employee has one or more contact numbers
     public function employee_contacts()
     {
         return $this->hasMany('App\Models\EmployeeContact');
     }
 
+    // ✳ One employee has one or more addresses
     public function employee_addresses()
     {
         return $this->hasMany('App\Models\EmployeeAddress');

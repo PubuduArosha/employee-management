@@ -1,6 +1,6 @@
 # Employee Management System
 
-## Setup Local Environment
+## ER diagram
 
 -----------------------------------------
 ## Setup Local Environment
