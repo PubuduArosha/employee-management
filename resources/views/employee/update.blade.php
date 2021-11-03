@@ -4,8 +4,9 @@
     <h1>Employee update</h1>
 
     <div class="container">
-        <form action="{{ route('employee.store') }}" method="post">
+        <form action="{{ route('employee.update', $employee->id) }}" method="post">
             {{ csrf_field() }}
+            {{ method_field('PUT') }}
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -98,7 +99,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Address - {{ $key+1 }}</label>
-                            <textare class="form-control" name="address_{{$key}}">{{ $employee_address->address }}</textare>
+                            <input type="text" name="address_{{$key}}" value="{{ $employee_address->address }}" class="form-control">
                         </div>
                     </div>
                 @endforeach
