@@ -85,19 +85,19 @@
                     </div>
                 </div>
 
-              <!-------->
+                <!-------->
                 <table class="table" id="multiForm">
                     <tr>
-                        <td><input type="text" name="employee_contacts[0][phone]" class="form-control" placeholder="Phone Number"/></td>
+                        <td><input type="text" name="employee_contacts[0][phone]" class="form-control" placeholder="Phone Number - 1"/></td>
                         <td><input type="button" name="add" value="Add" id="addRemoveIp" class="btn btn-outline-dark btn-sm"></td>
                     </tr>
                 </table>
-            <!-------->
+                <!-------->
 
                 <!--------------->
                 <table class="table" id="multiAddress">
                     <tr>
-                        <td><textarea name="employee_addresses[0][address]" class="form-control" placeholder="Address"></textarea></td>
+                        <td><textarea name="employee_addresses[0][address]" class="form-control" placeholder="Address - 1"></textarea></td>
                         <td><input type="button" name="add" value="Add" id="addRemoveAddress" class="btn btn-outline-dark btn-sm"></td>
                     </tr>
                 </table>
@@ -117,7 +117,7 @@
 
 @section('scripts')
     <script>
-        var i = 0;
+        var i = 1;
         $("#addRemoveIp").click(function () {
             ++i;
             $("#multiForm").append('<tr><td><input type="text" name="employee_contacts['+i+'][phone]" class="form-control" placeholder="Phone Number '+i+'"/></td><td><button type="button" class="remove-item btn btn-danger btn-sm">Delete</button></td></tr>');
@@ -128,7 +128,7 @@
     </script>
 
     <script>
-        var j = 0;
+        var j = 1;
         $('#addRemoveAddress').click(function () {
            ++j;
            $('#multiAddress').append('<tr><td><textarea class="form-control" name="employee_addresses['+j+'][address]" placeholder="Address '+j+'"></textarea></td><td><button type="button" class="remove-item btn btn-danger btn-sm">Delete</button></td></tr>');
