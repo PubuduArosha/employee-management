@@ -21,6 +21,8 @@
                 <th>NIC</th>
                 <th>Designation</th>
                 <th>Department</th>
+                <th>Phone(s)</th>
+                <th>Address(s)</th>
                 <th>Action(s)</th>
             </tr>
         </thead>
@@ -35,6 +37,16 @@
                     <td>{{ $employee->nic }}</td>
                     <td>{{ $employee->designation }}</td>
                     <td>{{ $employee->department->department_name }}</td>
+                    <td>
+                        @foreach($employee->employee_contacts as $employee_contact)
+                            <p>{{ $employee_contact->contact_number }}</p>
+                        @endforeach
+                    </td>
+                    <td>
+                        @foreach($employee->employee_addresses as $employee_address)
+                            <p>{{ $employee_address->address }}</p>
+                        @endforeach
+                    </td>
                     <td style="display: flex">
                         <a href="{{ route('employee.show', $employee->id) }}" class="btn btn-warning btn-sm mx-3">Edit</a>
                         <form action="{{ route('employee.delete', $employee->id) }}" method="post">

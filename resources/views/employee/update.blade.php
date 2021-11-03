@@ -85,6 +85,24 @@
                     </div>
                 </div>
 
+                @foreach($employee->employee_contacts as $key => $employee_contact)
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Phone Number - {{ $key+1 }}</label>
+                            <input type="text" name="phone_{{$key}}" value="{{ $employee_contact->contact_number }}" class="form-control">
+                        </div>
+                    </div>
+                @endforeach
+
+                @foreach($employee->employee_addresses as $key => $employee_address)
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Address - {{ $key+1 }}</label>
+                            <textare class="form-control" name="address_{{$key}}">{{ $employee_address->address }}</textare>
+                        </div>
+                    </div>
+                @endforeach
+
                 <div class="col-md-6 mt-3">
                     <div class="form-group">
                         <button class="btn btn-success btn-sm" type="submit">Update</button>
