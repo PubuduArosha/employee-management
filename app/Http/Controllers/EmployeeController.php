@@ -12,22 +12,26 @@ use Illuminate\Support\Facades\Log;
 
 class EmployeeController extends Controller
 {
+    // ✳ load all employees page
     public function index()
     {
-        $employees = Employee::all();
+        $employees = Employee::all(); // get all created employee list
 
         return view('employee.index')->with('employees', $employees);
     }
 
+    // ✳ load employee create page
     public function create()
     {
-        $departments = Department::all();
+        $departments = Department::all(); // get all created department list
 
         return view('employee.create')->with('departments', $departments);
     }
 
+    // ✳ employee create method
     public function store(Request $request)
     {
+        //validate employee create form
         $request->validate([
             'department' => 'required',
             'first_name' => 'required',
@@ -37,7 +41,7 @@ class EmployeeController extends Controller
             'designation' => 'required'
         ]);
 
-        $employee = new Employee();
+        $employee = new Employee();  // create new employee object
 
         $employee->department_id = $request->department;
 
@@ -51,7 +55,8 @@ class EmployeeController extends Controller
 
         $employee->designation = $request->designation;
 
-        if($employee->save()) {
+        if($employee->save()) { // save employee as new employee
+            
             if(!empty($request->employee_contacts)) {
                 foreach ($request->employee_contacts as $employee_contact) {
                     EmployeeContact::create([
@@ -71,22 +76,27 @@ class EmployeeController extends Controller
             }
             
         }
-        return redirect(route('employee.list'))->with('success', 'Employee successfully created');
+
+        return redirect(route('employee.list'))->with('success', 'Employee successfully created'); // return to employee list with the success message
+
     }
 
+    // ✳ load Employee show page
     public function show($id)
     {
-        $employee = Employee::find($id);
+        $employee = Employee::find($id); // find the specific employee
 
-        $departments = Department::all();
+        $departments = Department::all(); // get all created department list
 
         return view('employee.update')
             ->with('employee', $employee)
-            ->with('departments', $departments);
+            ->with('departments', $departments); // return employee edit page with specific employee and department list
     }
 
+    // ✳ Employee update method
     public function update(Request $request, $id)
     {
+        //validate employee update form
         $request->validate([
             'department' => 'required',
             'first_name' => 'required',
@@ -96,6 +106,7 @@ class EmployeeController extends Controller
             'designation' => 'required'
         ]);
 
+        // find the specific employee
         $employee = Employee::find($id);
 
         if($employee) {
@@ -112,22 +123,23 @@ class EmployeeController extends Controller
 
             $employee->designation = $request->designation;
 
-            $employee->update();
+            $employee->update(); // update employee
 
-            return redirect(route('employee.list'))->with('success', 'Employee successfully updated');
+            return redirect(route('employee.list'))->with('success', 'Employee successfully updated'); // return employee list page
 
         }
     }
 
+    // ✳ Employee delete method
     public function delete($id)
     {
-        $employee = Employee::find($id);
+        $employee = Employee::find($id); // find the specific employee
 
-        if($employee) {
+        if($employee) { // check if employee has
 
-            $employee->delete();
+            $employee->delete(); //delete employee
 
-            return redirect(route('employee.list'))->with('success', 'Employee successfully deleted');
+            return redirect(route('employee.list'))->with('success', 'Employee successfully deleted'); // return employee list page
 
         }
     }
