@@ -215,3 +215,127 @@ a {
 }
 
 /* department */
+
+#title{
+    width:400px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    margin-left:30px;
+    margin-top: 30px;
+    
+}
+
+#back{
+    width:40px;
+    height:30px;
+    margin-top: 5px;
+}
+#back_btn{
+    width:25px;
+
+}
+
+.table{
+    width:60%;
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-10%);
+}
+
+.table td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .table tr:hover {background-color: #ddd;}
+  
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: rgba(46, 134, 222, 0.1);
+    color: #000;
+  }
+
+  .t_btn{
+     padding:20px 20px;
+      border-radius: 5px;
+      height: 10px;
+      background: rgb(8, 173, 132);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+  }
+  .delete{
+      background-color: rgb(231, 69, 41);
+      border:none;
+      padding: 25px 20px;
+      margin-left: 20px;
+  }
+
+  .create{
+      width:100px;
+      height: 100px;
+      border-radius:50%;
+      text-align: center;
+      font-weight: 600;
+      position: absolute;
+      bottom:100px;
+      right:100px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      background-color: rgb(9, 172, 9);
+  }
+
+
+  /* update  */
+
+  .update_base{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+  }
+
+  .dep_label{
+      font-weight: 600;
+      font-size: 1.2rem;
+  }
+  #dep_input{
+      width:200px;
+      height:40px;
+      border-radius: 5px;
+      border:1px solid rgba(46, 134, 222, 0.884);
+      font-size: 1rem;
+      padding:0px 10px;
+  }
+
+  .up_base{
+      float: right;
+      margin-top: 20px;
+  }
+
+    .update_btn{
+        width:150px;
+        height:40px;
+        border-radius: 5px;
+        border:none;
+        background: rgb(46, 134, 222);
+        color:#fff;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top:20px;
+    }
+
+    .cancel_text{
+        margin-left: 10px;
+    }

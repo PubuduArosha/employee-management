@@ -2,18 +2,22 @@
 
 @section('content')
     <div id="title">
-        <div id="back"></div>
-        <h1>Departments All</h1>
+        <a href="/dashboard">
+        <div id="back">
+            <img src="../images/arrow.svg" alt="" id="back_btn">
+        </div>
+        </a>
+        <h2>All Departments</h2>
     </div>
 
-    <a href="{{ route('department.create') }}" class="btn btn-success btn-sm">Create</a>
+    
 
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">
             {{ Session::get('success') }}
         </div>
     @endif
-
+    <a href="{{ route('department.create') }}" class="create">Create</a>
     <table class="table">
         <thead>
             <th>Id</th>
@@ -27,11 +31,11 @@
                     <td>{{ $department->id }}</td>
                     <td>{{ $department->department_name }}</td>
                     <td style="display: flex;">
-                        <a href="{{ route('department.show', $department->id) }}" class="btn btn-warning btn-sm mx-3">Edit</a>
+                        <a href="{{ route('department.show', $department->id) }}" class="t_btn">Edit</a>
                         <form action="{{ route('department.delete', $department->id) }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            <button type="submit" class="t_btn delete">Delete</button>
                         </form>
                     </td>
                 </tr>

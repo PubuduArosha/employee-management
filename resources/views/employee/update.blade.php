@@ -1,7 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Employee update</h1>
+<div id="title">
+    <a href="/dashboard">
+    <div id="back">
+        <img src="../../images/arrow.svg" alt="" id="back_btn">
+    </div>
+    </a>
+    <h2>Update Employee</h2>
+</div>
 
     <div class="container">
         <form action="{{ route('employee.update', $employee->id) }}" method="post">

@@ -1,9 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Employee List</h1>
+<div id="title">
+    <a href="/dashboard">
+    <div id="back">
+        <img src="../images/arrow.svg" alt="" id="back_btn">
+    </div>
+    </a>
+    <h2>Employee List</h2>
+</div>
 
-    <a href="{{ route('employee.create') }}" class="btn btn-success btn-sm">Create</a>
+    <a href="{{ route('employee.create') }}" class="create">Create</a>
 
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">
@@ -48,11 +55,11 @@
                         @endforeach
                     </td>
                     <td style="display: flex">
-                        <a href="{{ route('employee.show', $employee->id) }}" class="btn btn-warning btn-sm mx-3">Edit</a>
+                        <a href="{{ route('employee.show', $employee->id) }}" class="t_btn">Edit</a>
                         <form action="{{ route('employee.delete', $employee->id) }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            <button type="submit" class="t_btn delete">Delete</button>
                         </form>
                     </td>
                 </tr>
