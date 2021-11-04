@@ -3,8 +3,6 @@
 @section('content')
 
 
-
-
 <div id="update_wrapper">
     <div id="title">
         <a href="/dashboard">
