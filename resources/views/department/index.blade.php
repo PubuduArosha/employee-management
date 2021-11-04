@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Departments All</h1>
+    <div id="title">
+        <div id="back"></div>
+        <h1>Departments All</h1>
+    </div>
 
     <a href="{{ route('department.create') }}" class="btn btn-success btn-sm">Create</a>
 

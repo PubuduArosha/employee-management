@@ -4,16 +4,26 @@
 
     <div class="dashboard_container">
 
-        
+        <div id="dashboard-wrapper">
+
+      
+
+        <a href="{{ route('department.list') }}">
       
             <div class="dash_items">
-                <a href="{{ route('department.list') }}" class="btn btn-primary">Department</a>
+                <img src="images/departments.svg" alt="" id="item_img">
+                <span>Department</span>
             </div>
+            </a>
+
+            <a href="{{ route('employee.list') }}" >
             <div class="dash_items">
-                <a href="{{ route('employee.list') }}" class="btn btn-primary">Employee</a>
+                <img src="images/employees.svg" alt="" id="item_img">
+                <span>Employee</span>
             </div>
+            </a>
 
             <div id="base_bottom"></div>
-      
-    </div>
+        </div>
+    </div>  
 @endsection
