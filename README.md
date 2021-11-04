@@ -1,6 +1,6 @@
 # Employee Management System
 
-## ER diagram
+## Setup Local Environment
 
 -----------------------------------------
 ## Setup Local Environment
@@ -15,7 +15,7 @@ git clone https://github.com/pubuduarosha/employee-management.git
 Change the project directory.
 
 ```sh
-cd <your project folder>
+cd {your project folder}
 ```
 
 Install dependencies using the following command.
