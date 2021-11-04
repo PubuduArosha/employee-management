@@ -14,7 +14,7 @@
         <form action="{{ route('department.update', $department->id) }}" method="post">
             {{ csrf_field() }}
             {{ method_field('PUT') }}
-            <div class="row">
+            <div>
                 <div class="form-group">
                     <div class="col-md-8">
                         <label for="" class="dep_label">Department Name <span class="text-danger">*</span></label>

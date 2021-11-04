@@ -13,7 +13,7 @@
     <div class="update_base">
         <form action="{{ route('department.store') }}" method="post">
             {{ csrf_field() }}
-            <div class="row">
+            <div>
                 <div class="form-group">
                     <div class="col-md-8">
                         <label for="" class="dep_label">Department Name <span class="text-danger">*</span></label>

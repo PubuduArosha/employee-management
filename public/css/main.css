@@ -352,17 +352,15 @@ a {
     /* employee update  */
 
     .emp_update_form-base{
-
-    width:calc(100vw / 2);
-    position: relative;
-    height:calc(100vh / 1.5);
-    margin-left:calc(100vw / 4);
+        /* width:calc(100vw / 2); */
+        position: relative;
+        height:calc(100vh / 1.5);
+        /* margin-left:calc(100vw / 4); */
     }
 
     .update-form label{
-       position: absolute;
+        position: absolute;
         margin-top: 38px;
-       
     }
 
     .update-form input,select{
@@ -387,6 +385,7 @@ a {
 .row{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
 }
 
 #dep_sel,#dep_inputs{
@@ -399,7 +398,7 @@ a {
 
 #dep_sel{
     overflow-y: auto;
-    overflow-x: none;
+    /* overflow-x: none; */
     max-height: 70vh;
     height:60vh;
 }
@@ -451,9 +450,6 @@ a {
 
 }
 
-
-
-
 .alert , .alert-success{
     width:100%;
     height:50px;
@@ -480,4 +476,8 @@ a {
         bottom:0;
         opacity: 1;
     }
+}
+
+.right{
+    float:right
 }

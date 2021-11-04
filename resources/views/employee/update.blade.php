@@ -116,7 +116,7 @@
 
                 <br/>
                 <div class="update_button_base">
-                    <div class="update-form">
+                    <div class="update-form right">
                         <button class="update_btn" type="submit">Update</button>
                         <a href="{{ route('employee.list') }}" class="cancel_text">Cancel</a>
                     </div>
