@@ -23,7 +23,7 @@
             {{ csrf_field() }}
            
                   
-                    <input id="email" type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="E-mail">
+                    <input id="email" type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

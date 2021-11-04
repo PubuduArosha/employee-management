@@ -1,6 +1,16 @@
 # Employee Management System
 ----------------------------------------
+![loging](https://user-images.githubusercontent.com/41939687/140296188-215f3c22-d782-4bc3-858b-b805c21462b2.PNG)
 
+![Dashboard](https://user-images.githubusercontent.com/41939687/140296364-f456596e-12e2-442b-b387-40d64391e60d.PNG)
+
+![Dep](https://user-images.githubusercontent.com/41939687/140296796-ea90f8dc-3601-4912-a079-648a642fd3a8.PNG)
+
+![DP up](https://user-images.githubusercontent.com/41939687/140296945-47618508-deda-490a-a9a9-262b15603afd.PNG)
+
+![emp add](https://user-images.githubusercontent.com/41939687/140297426-f565a986-5856-4569-a570-db5d7115955e.PNG)
+
+![e list](https://user-images.githubusercontent.com/41939687/140299049-ca475257-60f6-4b05-8e10-588650e5a3f9.PNG)
 
 ## Entity–relationship model
 
@@ -60,3 +70,9 @@ php artisan serve --port=8001
 
 Virtual host this article may be helpfull for create virtual-host : https://medium.com/@ajtech.mubasheer/configure-a-virtual-host-for-laravel-project-in-xampp-for-windows-10-d3f0068e7e1b
 
+## Login details
+
+```sh
+Email : admin@gmail.com
+Password : 123456
+```

@@ -10,13 +10,12 @@
         <h2>All Departments</h2>
     </div>
 
-    
-
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">
             {{ Session::get('success') }}
         </div>
     @endif
+
     <a href="{{ route('department.create') }}" class="create">Create</a>
     <table class="table">
         <thead>

@@ -117,6 +117,7 @@ a {
      margin-top:25px;
      height:45px;
 }
+
 #login_btn:hover{
     transform:scale(1.02);
     transition:0.5s ease;
@@ -247,139 +248,139 @@ a {
 .table td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
-  }
+}
   
-  .table tr:nth-child(even){background-color: #f2f2f2;}
+.table tr:nth-child(even){background-color: #f2f2f2;}
   
-  .table tr:hover {background-color: #ddd;}
+.table tr:hover {background-color: #ddd;}
   
-  .table th {
+.table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background: rgba(46, 134, 222, 0.1);
     color: #000;
-  }
+}
 
-  .t_btn{
-     padding:20px 20px;
-      border-radius: 5px;
-      height: 10px;
-      background: rgb(8, 173, 132);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-  }
-  .delete{
-      background-color: rgb(231, 69, 41);
-      border:none;
-      padding: 25px 20px;
-      margin-left: 20px;
-  }
+.t_btn{
+    padding:20px 20px;
+    border-radius: 5px;
+    height: 10px;
+    background: rgb(8, 173, 132);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
 
-  .create{
-      width:100px;
-      height: 100px;
-      border-radius:50%;
-      text-align: center;
-      font-weight: 600;
-      position: absolute;
-      bottom:100px;
-      right:100px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      background-color: rgb(9, 172, 9);
-  }
+.delete{
+    background-color: rgb(231, 69, 41);
+    border:none;
+    padding: 25px 20px;
+    margin-left: 20px;
+}
 
-
-  /* update  */
-
-  .update_base{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-    
-      padding-bottom: 20px;
-  }
-
-  .scroll{
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .dep_label{
-      font-weight: 600;
-      font-size: 1.2rem;
-  }
-  #dep_input{
-      width:200px;
-      height:40px;
-      border-radius: 5px;
-      border:1px solid rgba(46, 134, 222, 0.884);
-      font-size: 1rem;
-      padding:0px 10px;
-  }
-
-  .up_base{
-      float: right;
-      margin-top: 20px;
-  }
-
-    .update_btn{
-        width:150px;
-        height:40px;
-        border-radius: 5px;
-        border:none;
-        background: rgb(46, 134, 222);
-        color:#fff;
-        font-weight: 600;
-        font-size: 1rem;
-        cursor: pointer;
-        margin-top:20px;
-    }
-
-    .cancel_text{
-        margin-left: 10px;
-    }
+.create{
+    width:100px;
+    height: 100px;
+    border-radius:50%;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    bottom:100px;
+    right:100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: rgb(9, 172, 9);
+}
 
 
+/* update  */
 
-    /* employee update  */
+.update_base{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  
+    padding-bottom: 20px;
+}
 
-    .emp_update_form-base{
-        /* width:calc(100vw / 2); */
-        position: relative;
-        height:calc(100vh / 1.5);
-        /* margin-left:calc(100vw / 4); */
-    }
+.scroll{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
-    .update-form label{
-        position: absolute;
-        margin-top: 38px;
-    }
+.dep_label{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+#dep_input{
+    width:200px;
+    height:40px;
+    border-radius: 5px;
+    border:1px solid rgba(46, 134, 222, 0.884);
+    font-size: 1rem;
+    padding:0px 10px;
+}
 
-    .update-form input,select{
-        margin-top: 30px;
-        margin-left:200px;
-        width:320px;
-        height:50px;
-    }
+.up_base{
+    float: right;
+    margin-top: 20px;
+}
 
-    #update_wrapper{
-        height:calc(100vh - 60px);
-        width:100%;
-        position: absolute;
-    }
+.update_btn{
+    width:150px;
+    height:40px;
+    border-radius: 5px;
+    border:none;
+    background: rgb(46, 134, 222);
+    color:#fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top:20px;
+}    
+
+.cancel_text{
+    margin-left: 10px;
+}
+
+
+
+/* employee update  */
+
+.emp_update_form-base{
+    /* width:calc(100vw / 2); */
+    position: relative;
+    height:calc(100vh / 1.5);
+    /* margin-left:calc(100vw / 4); */
+}
+
+.update-form label{
+    position: absolute;
+    margin-top: 38px;
+}
+
+.update-form input,select{
+    margin-top: 30px;
+    margin-left:200px;
+    width:320px;
+    height:50px;
+}
+
+#update_wrapper{
+    height:calc(100vh - 60px);
+    width:100%;
+    position: absolute;
+}
  
-    .update_button_base{
-        padding-bottom: 20px;
-    }
-
+.update_button_base{
+    padding-bottom: 20px;
+}
 
 
 .row{
@@ -441,13 +442,11 @@ a {
     align-items: center;
 }
 
-
 #addRemoveIp , #addRemoveAddress{
     width:100px;
     height:40px;
     margin-left: 5px;
     padding:0 !important;
-
 }
 
 .alert , .alert-success{
@@ -457,6 +456,23 @@ a {
     bottom:0;
     left:0;
     background: rgba(9, 172, 9, 0.8);
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 1;
+    animation: fadeIn 0.5s;
+}
+
+.redalert , .redalert-delete{
+    width:100%;
+    height:50px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: rgba(196, 7, 7, 0.8);
     color:#fff;
     display: flex;
     align-items: center;
