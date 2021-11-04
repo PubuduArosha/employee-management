@@ -5,7 +5,7 @@
 
 <div id="update_wrapper">
     <div id="title">
-        <a href="/dashboard">
+        <a href="/employee/all">
         <div id="back">
             <img src="../../images/arrow.svg" alt="" id="back_btn">
         </div>

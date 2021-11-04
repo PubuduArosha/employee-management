@@ -1,8 +1,9 @@
 # Employee Management System
+----------------------------------------
 
-## Setup Local Environment
 
------------------------------------------
+## Entity–relationship model
+
 ## Setup Local Environment
 
 Clone the repository <github repo link>

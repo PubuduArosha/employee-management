@@ -381,3 +381,103 @@ a {
     .update_button_base{
         padding-bottom: 20px;
     }
+
+
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+#dep_sel,#dep_inputs{
+    width:100%;
+    height:100%;
+    display: grid;
+    place-items: center;
+    
+}
+
+#dep_sel{
+    overflow-y: auto;
+    overflow-x: none;
+    max-height: 70vh;
+    height:60vh;
+}
+
+#dep_inputs label{
+    width: 150px;
+    text-align: right;
+    display: inline-block;
+}
+
+#dep_inputs input{
+    margin-left: 50px;
+    width:200px;
+    height:40px;
+    margin-top:30px;
+    padding:0px 0px 0px 10px;
+}
+
+#dep{
+    margin:0px 0px 0px 20px;
+    padding:0px 0px 0px 10px;
+}
+
+#dep_sel input , textarea{
+    width:200px;
+    height:40px;
+    padding:0px 0px 0px 10px;
+}
+
+#dep_sel , textarea{
+  margin-top:30px;
+}
+
+.dep_select{
+    margin-bottom: 20px;
+}
+
+#text-area{
+    display: flex;
+    align-items: center;
+}
+
+
+#addRemoveIp , #addRemoveAddress{
+    width:100px;
+    height:40px;
+    margin-left: 5px;
+    padding:0 !important;
+
+}
+
+
+
+
+.alert , .alert-success{
+    width:100%;
+    height:50px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background: rgba(9, 172, 9, 0.8);
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 1;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        bottom:-60px;
+    }
+    to {
+        bottom:0;
+        opacity: 1;
+    }
+}
