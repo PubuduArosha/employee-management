@@ -4,6 +4,8 @@
 
 ## Entity–relationship model
 
+<img width="3344" alt="ER Diagram (Community)" src="https://user-images.githubusercontent.com/41939687/140287679-cbf2b80a-cb16-40fa-b780-8705b2219008.png">
+
 ## Setup Local Environment
 
 Clone the repository <github repo link>
