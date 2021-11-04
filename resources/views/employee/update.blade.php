@@ -100,7 +100,7 @@
                     <div class="col-md-6">
                         <div class="update-form">
                             <label for="">Phone Number - {{ $key+1 }}</label>
-                            <input type="text" name="phone_{{$key}}" value="{{ $employee_contact->contact_number }}" class="form-control">
+                            <input type="text" name="phone_{{$key+1}}" value="{{ $employee_contact->contact_number }}" class="form-control">
                         </div>
                     </div>
                 @endforeach
@@ -109,7 +109,7 @@
                     <div class="col-md-6">
                         <div class="update-form">
                             <label for="">Address - {{ $key+1 }}</label>
-                            <input type="text" name="address_{{$key}}" value="{{ $employee_address->address }}" class="form-control">
+                            <input type="text" name="address_{{$key+1}}" value="{{ $employee_address->address }}" class="form-control">
                         </div>
                     </div>
                 @endforeach

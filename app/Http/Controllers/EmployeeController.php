@@ -125,6 +125,20 @@ class EmployeeController extends Controller
 
             $employee->update(); // update employee
 
+            if(!empty($employee->employee_contacts)) {
+                foreach ($employee->employee_contacts as $key => $employee_contact) {
+                    $employee_contact->contact_number = $request['phone_'.($key+1)];
+                    $employee_contact->update();
+                }
+            }
+
+            if (!empty($employee->employee_addresses)) {
+                foreach ($employee->employee_addresses as $key => $employee_address) {
+                    $employee_address->address = $request['address_'.($key+1)];
+                    $employee_address->update();
+                }
+            }
+
             return redirect(route('employee.list'))->with('success', 'Employee successfully updated'); // return employee list page
 
         }
