@@ -2,6 +2,7 @@
 
 @section('content')
 
+    {{-- title --}}
     <div id="title">
         <a href="/employee/all">
         <div id="back">
@@ -18,7 +19,7 @@
 
                 <div id="dep_inputs">
 
-
+                    {{-- first name --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">First Name<span class="text-danger">*</span></label>
@@ -30,7 +31,8 @@
                             @enderror
                         </div>
                     </div>
-    
+                    
+                    {{-- last name --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Last Name<span class="text-danger">*</span></label>
@@ -43,6 +45,7 @@
                         </div>
                     </div>
     
+                    {{-- birth day --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Birthday<span class="text-danger">*</span></label>
@@ -55,6 +58,7 @@
                         </div>
                     </div>
     
+                    {{-- nic --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">NIC<span class="text-danger">*</span></label>
@@ -67,6 +71,7 @@
                         </div>
                     </div>
     
+                    {{-- designation --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Designation<span class="text-danger">*</span></label>
@@ -80,10 +85,9 @@
                     </div>
                 </div>
 
-              
-
                 <div id="dep_sel">
 
+                    {{-- deparment --}}
                     <div class="col-md-6 ">
                         <div class="form-group dep_select">
                             <label for="dep">Department <span class="text-danger">*</span></label>
@@ -101,23 +105,23 @@
                         </div>
                     </div>
     
+                    {{-- phone numbers --}}
                     <table class="col-md-6 " id="multiForm">
                         <tr>
                             <td><input type="text" name="employee_contacts[0][phone]" class="form-control" placeholder="Phone Number - 1"/></td>
                             <td><input type="button" name="add" value="Add" id="addRemoveIp" class="btn btn-outline-dark btn-sm"></td>
                         </tr>
                     </table>
-                    <!-------->
                     
-                    <!--------------->
+                    {{-- address--}}
                     <table class="col-md-6" id="multiAddress">
                         <tr id="text-area">
                             <td ><textarea name="employee_addresses[0][address]" class="form-control" placeholder="Address - 1"></textarea></td>
                             <td><input type="button" name="add" value="Add" id="addRemoveAddress" class="btn btn-outline-dark btn-sm"></td>
                         </tr>
                     </table>
-                    <!--------------->
                     
+                    {{-- create employee button --}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <button class="update_btn" type="submit">Create</button>
@@ -125,17 +129,7 @@
                         </div>
                     </div>
 
-   <!-------->
-
                 </div>
-
-
-        
-
-
-             
-
-              
 
             </div>
         </form>
@@ -143,6 +137,8 @@
 @endsection
 
 @section('scripts')
+
+    {{-- multi phone numbers --}}
     <script>
         var i = 1;
         $("#addRemoveIp").click(function () {
@@ -154,6 +150,7 @@
         });
     </script>
 
+    {{-- multi address --}}
     <script>
         var j = 1;
         $('#addRemoveAddress').click(function () {
@@ -166,12 +163,7 @@
         });
 
         $(document).on('click', '.alert', function() {
-    alert('hello');
-});
-
-
-    
-Ï
-
+            alert('hello');
+        });
     </script>
 @endsection

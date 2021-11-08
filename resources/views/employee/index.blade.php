@@ -18,7 +18,9 @@
         </div>
     @endif
 
+    {{-- table list --}}
     <table class="table">
+        {{-- table head --}}
         <thead>
             <tr>
                 <th>Id</th>
@@ -34,6 +36,7 @@
             </tr>
         </thead>
 
+        {{-- table data --}}
         <tbody>
             @foreach($employees as $employee)
                 <tr>
@@ -54,6 +57,7 @@
                             <p>{{ $employee_address->address }}</p>
                         @endforeach
                     </td>
+                    {{-- delete --}}
                     <td style="display: flex">
                         <a href="{{ route('employee.show', $employee->id) }}" class="t_btn">Edit</a>
                         <form action="{{ route('employee.delete', $employee->id) }}" method="post">

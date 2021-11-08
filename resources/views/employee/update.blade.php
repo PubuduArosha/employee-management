@@ -4,6 +4,8 @@
 
 
 <div id="update_wrapper">
+
+    {{-- title --}}
     <div id="title">
         <a href="/employee/all">
         <div id="back">
@@ -35,7 +37,7 @@
                     </div>
                 </div>
 
-
+                {{-- first name --}}
                 <div class="col-md-6">
                     <div class="update-form">
                         <label for="">First Name<span class="text-danger">*</span></label>
@@ -48,6 +50,7 @@
                     </div>
                 </div>
 
+                {{-- last name --}}
                 <div class="col-md-6">
                     <div class="update-form">
                         <label for="">Last Name<span class="text-danger">*</span></label>
@@ -60,6 +63,7 @@
                     </div>
                 </div>
 
+                {{-- birth date --}}
                 <div class="col-md-6">
                     <div class="update-form">
                         <label for="">Birthday<span class="text-danger">*</span></label>
@@ -72,6 +76,7 @@
                     </div>
                 </div>
 
+                {{-- nic --}}
                 <div class="col-md-6">
                     <div class="update-form">
                         <label for="">NIC<span class="text-danger">*</span></label>
@@ -84,6 +89,7 @@
                     </div>
                 </div>
 
+                {{-- designation --}}
                 <div class="col-md-6">
                     <div class="update-form">
                         <label for="">Designation<span class="text-danger">*</span></label>
@@ -96,6 +102,7 @@
                     </div>
                 </div>
 
+                {{-- phone numbers --}}
                 @foreach($employee->employee_contacts as $key => $employee_contact)
                     <div class="col-md-6">
                         <div class="update-form">
@@ -105,6 +112,7 @@
                     </div>
                 @endforeach
 
+                {{-- address --}}
                 @foreach($employee->employee_addresses as $key => $employee_address)
                     <div class="col-md-6">
                         <div class="update-form">
@@ -115,6 +123,8 @@
                 @endforeach
 
                 <br/>
+                
+                {{-- update button --}}
                 <div class="update_button_base">
                     <div class="update-form right">
                         <button class="update_btn" type="submit">Update</button>
